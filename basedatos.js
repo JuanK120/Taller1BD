@@ -41,9 +41,9 @@ router.post('/actualizarpacientes', async (req, res) => {
 });
 
 router.delete('/borrarpacientes', async (req, res) => {
-  const { id } = req.body;
+  const { numid } = req.body;
   await pool.query(
-    `DELETE FROM pacientes WHERE id = '${id}' ;`
+    `DELETE FROM pacientes WHERE numid = '${numid}' ;`
   );
   res.send('borrado');
 });
